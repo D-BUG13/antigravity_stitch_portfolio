@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+
+    <title>ANDR_DEV.HTML - SMKN 02 SURAKARTA PORTOFOLIO</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#2a2a2a",
+              surface: "#131313",
+              "on-primary": "#690005",
+              "tertiary-fixed": "#dce3f0",
+              "secondary-container": "#ee9800",
+              "secondary-fixed": "#ffddb8",
+              "error-container": "#93000a",
+              "surface-container": "#201f1f",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#404752",
+              "surface-variant": "#353534",
+              "on-tertiary-container": "#f5f7ff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-fixed": "#2a1700",
+              secondary: "#ffb95f",
+              "surface-bright": "#3a3939",
+              "surface-container-highest": "#353534",
+              "outline-variant": "#5c403c",
+              "tertiary-container": "#6b727d",
+              "on-surface-variant": "#e6bdb8",
+              "on-background": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary": "#2a313b",
+              primary: "#ffb4ab",
+              "on-primary-fixed": "#410002",
+              "surface-tint": "#ffb4ab",
+              "on-primary-container": "#fff6f5",
+              "on-primary-fixed-variant": "#93000b",
+              "primary-fixed": "#ffdad6",
+              "primary-fixed-dim": "#ffb4ab",
+              "tertiary-fixed-dim": "#c0c7d3",
+              "inverse-primary": "#bf0715",
+              background: "#131313",
+              "on-error": "#690005",
+              tertiary: "#c0c7d3",
+              "on-tertiary-fixed": "#151c25",
+              "on-error-container": "#ffdad6",
+              "primary-container": "#dc2626",
+              "on-secondary-container": "#5b3800",
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-dim": "#131313",
+              error: "#ffb4ab",
+              outline: "#ac8884",
+              "on-secondary": "#472a00",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-on-surface": "#313030",
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+            spacing: {
+              "gutter-desktop": "1.5rem",
+              "space-lg": "1.5rem",
+              "space-xl": "2.5rem",
+              gutter: "1rem",
+              "margin-desktop": "2rem",
+              margin: "1rem",
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "label-lg": ["Space Mono"],
+              "label-sm": ["Space Mono"],
+              "label-md": ["Space Mono"],
+              "body-sm": ["Courier Prime"],
+              "headline-md": ["Space Mono"],
+              "display-mobile": ["Space Mono"],
+              display: ["Space Mono"],
+              "body-lg": ["Courier Prime"],
+              "body-md": ["Courier Prime"],
+              "headline-lg": ["Space Mono"],
+              "headline-lg-mobile": ["Space Mono"],
+              "headline-sm": ["Space Mono"],
+            },
+            fontSize: {
+              "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.08em", fontWeight: "700" }],
+              "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }],
+              "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "700" }],
+              "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "400" }],
+              "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "700" }],
+              "display-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+              display: ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+              "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "400" }],
+              "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+              "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }],
+              "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "700" }],
+              "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "0.02em", fontWeight: "700" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface select-none antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface-container-high border-b-2 border-surface-container-lowest"
+    >
+      <div
+        class="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between border-x-2 border-surface-bright bg-surface-container"
+      >
+        <div class="flex items-center gap-space-md">
+          <img
+            alt="Logo SMKN 02 Surakarta"
+            class="h-8 w-auto object-contain"
+            src="./assets/SMK N 2 Surakarta_02.png"
+          />
+          <div class="flex flex-col">
+            <span class="font-label-lg text-label-lg text-secondary tracking-widest uppercase">[ ANDR_DEV.HTML ]</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">
+              SMKN 02 SURAKARTA
+            </span>
+          </div>
+        </div>
+      
+        <div class="flex items-center gap-space-md">
+          <div
+            class="hidden lg:flex items-center border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright bg-surface-container-lowest px-space-sm py-space-xs"
+          >
+            <span class="w-2 h-2 bg-secondary animate-pulse mr-space-xs"></span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase">ONLINE / STATUS: READY TO WORK</span>
+          </div>
+          <div
+            class="flex items-center p-0.5 border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black bg-surface-container-high"
+          >
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="./assets/myface.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="w-full pt-20 bg-background max-w-[1280px] mx-auto border-x-2 border-surface-container-highest min-h-[calc(100vh-5rem)]"
+    >
+      <div class="flex flex-col w-full">
+        <div
+          class="w-full bg-surface-container-lowest px-margin-desktop py-space-xs flex items-center justify-between border-b-2 border-surface-container-high"
+        >
+          <div class="flex items-center gap-space-sm overflow-hidden">
+            <span
+              class="bg-primary-container text-on-primary-container px-space-xs py-0.5 font-label-sm text-label-sm uppercase tracking-wider shrink-0"
+            >
+              EXEC_LOG
+            </span>
+            <span class="font-body-sm text-body-sm text-secondary truncate">
+              &gt; C:\DOS\BOOT\INIT_PORTFOLIO.BAT LOADED OK. READY FOR RECRUITER QUERY...
+            </span>
+          </div>
+          <div class="hidden sm:flex items-center gap-space-md shrink-0">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">SYS_RAM: 640KB OK</span>
+            <span class="font-label-sm text-label-sm text-secondary animate-pulse">● LIVE_FEED</span>
+          </div>
+        </div>
+        <div class="w-full px-margin md:px-margin-desktop py-space-xl flex flex-col gap-space-xl">
+          <section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+            <div
+              class="lg:col-span-5 bg-surface-container flex flex-col border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+            >
+              <div
+                class="bg-surface-container-highest px-space-md py-space-xs flex items-center justify-between border-b-2 border-surface-container-lowest"
+              >
+                <div class="flex items-center gap-space-xs">
+                  <span class="text-secondary font-label-md text-label-md">►</span>
+                  <h2 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                    KOTAK BIODATA [SYS_INFO.TXT]
+                  </h2>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span
+                    class="w-3 h-3 bg-surface-container-high border border-t-surface-bright border-l-surface-bright border-b-black border-r-black text-[9px] flex items-center justify-center text-on-surface-variant leading-none"
+                  >
+                    _
+                  </span>
+                  <span
+                    class="w-3 h-3 bg-surface-container-high border border-t-surface-bright border-l-surface-bright border-b-black border-r-black text-[9px] flex items-center justify-center text-on-surface-variant leading-none"
+                  >
+                    □
+                  </span>
+                  <span
+                    class="w-3 h-3 bg-primary-container border border-t-surface-bright border-l-surface-bright border-b-black border-r-black text-[9px] flex items-center justify-center text-on-primary-container leading-none"
+                  >
+                    ×
+                  </span>
+                </div>
+              </div>
+              <div class="p-space-md flex flex-col gap-space-md flex-grow justify-between">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-space-md">
+                  <div
+                    class="w-28 h-32 shrink-0 bg-surface-container-lowest p-1 border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright flex flex-col items-center justify-center relative"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      data-alt="Close-up portrait of an Indonesian vocational school student wearing a neat school uniform with dark hair, focused and polite expression, subtle early 2000s low-fi digital camera color grading, warm ambient light, slightly pixel-crisp retro digital style."
+                      src="./assets/myface.jpeg"
+                    />
+                    <div class="absolute bottom-0 inset-x-0 bg-surface-container-lowest/90 text-center py-0.5">
+                      <span class="font-label-sm text-label-sm text-secondary">DANISH_ANDR.BMP</span>
+                    </div>
+                  </div>
+                  <div class="flex-grow w-full">
+                    <div
+                      class="bg-surface-container-lowest p-space-sm border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                    >
+                      <table class="w-full font-body-sm text-body-sm text-left">
+                        <tbody>
+                          <tr class="border-b border-surface-container-high">
+                            <td class="text-on-surface-variant py-1 font-label-sm text-label-sm uppercase w-24">
+                              NAMA
+                            </td>
+                            <td class="text-secondary font-bold py-1">: Danish Andro Wibowo Putro</td>
+                          </tr>
+                          <tr class="border-b border-surface-container-high">
+                            <td class="text-on-surface-variant py-1 font-label-sm text-label-sm uppercase">TTL</td>
+                            <td class="text-on-surface py-1">: Surakarta, 28 Feb 2009</td>
+                          </tr>
+                          <tr class="border-b border-surface-container-high">
+                            <td class="text-on-surface-variant py-1 font-label-sm text-label-sm uppercase">ALAMAT</td>
+                            <td class="text-on-surface py-1">: Boyolali, Jawa Tengah</td>
+                          </tr>
+                          <tr class="border-b border-surface-container-high">
+                            <td class="text-on-surface-variant py-1 font-label-sm text-label-sm uppercase">HOBI</td>
+                            <td class="text-on-surface py-1">: Music &amp; Coding</td>
+                          </tr>
+                          <tr>
+                            <td class="text-on-surface-variant py-1 font-label-sm text-label-sm uppercase">INSTANSI</td>
+                            <td class="text-primary font-bold py-1">: SMKN 02 Surakarta (RPL)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-surface-container-lowest px-space-sm py-space-xs border border-surface-variant flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">STATUS AKADEMIK:</span>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold">KELAS XI </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:col-span-7 bg-surface-container flex flex-col border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+            >
+              <div
+                class="bg-primary-container px-space-md py-space-xs flex items-center justify-between border-b-2 border-surface-container-lowest"
+              >
+                <div class="flex items-center gap-space-xs">
+                  <span class="text-on-primary-container font-label-md text-label-md">■</span>
+                  <h2 class="font-label-md text-label-md text-on-primary-container uppercase tracking-wider">
+                    TENTANG SAYA [ABOUT_ME.TXT]
+                  </h2>
+                </div>
+                <span class="font-label-sm text-label-sm text-on-primary-container uppercase">ANSI_ENC_UTF8</span>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-grow gap-space-md">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-space-xs">
+                    <span
+                      class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 border border-surface-variant inline-block"
+                    >
+                      FILE SIZE: 191 BYTES
+                    </span>
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest px-2 py-0.5 border border-surface-variant inline-block"
+                    >
+                      CHAR_COUNT: 199 / 250 MAX
+                    </span>
+                  </div>
+                  <div
+                    class="bg-surface-container-lowest p-space-md border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                  >
+                    <p class="font-body-lg text-body-lg text-on-surface leading-relaxed tracking-wide">
+                      “Siswa SMK jurusan RPL tingkat akhir yang antusias dalam desktop app development &amp; database. Terbiasa
+                      memecahkan masalah kode, disiplin, dan siap magang atau bekerja penuh waktu di industri
+                      teknologi.”
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+                  <div
+                    class="bg-secondary text-on-secondary-fixed px-space-md py-space-xs border-2 border-t-secondary-fixed border-l-secondary-fixed border-b-on-secondary border-r-on-secondary flex items-center gap-space-xs"
+                  >
+                    <span class="w-2.5 h-2.5 bg-primary-container animate-ping"></span>
+                    <span class="font-label-md text-label-md uppercase tracking-wider font-bold">
+                      [STATUS: SIAP KERJA / OPEN TO WORK]
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                    <span>PENEMPATAN:</span>
+                    <span
+                      class="text-on-surface font-bold bg-surface-container-high px-2 py-0.5 border border-surface-bright"
+                    >
+                      SURAKARTA / WFH
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between border-b-2 border-surface-container-high pb-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="text-primary font-headline-sm text-headline-sm">►</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">
+                  KEMAMPUAN TEKNIS [SKILLS.DAT]
+                </h2>
+              </div>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase hidden sm:inline">
+                CAPABILITY_INDEX v1.4
+              </span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+              <div
+                class="bg-surface-container-low p-space-md border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-secondary uppercase">[SLOT_01]</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">85%</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Assembly, C &amp; C++</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Backend logic, low-level maintenance, arsitektur dan optimisasi sistem.
+                  </p>
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-space-xs border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                >
+                  <div
+                    class="flex items-center justify-between text-secondary font-label-md text-label-md tracking-widest"
+                  >
+                    <span>[■■■■■■■■□□]</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-secondary uppercase">[SLOT_02]</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">90%</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Python</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Scripting, analisis matematika, dan perancangan awal sebuah arsitektur.
+                  </p>
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-space-xs border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                >
+                  <div
+                    class="flex items-center justify-between text-secondary font-label-md text-label-md tracking-widest"
+                  >
+                    <span>[■■■■■■■■■□]</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-secondary uppercase">[SLOT_03]</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">80%</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">MySQL Database</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Perancangan skema relasional, normalisasi tabel 1NF-3NF, relasi foreign key, dan query JOIN.
+                  </p>
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-space-xs border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                >
+                  <div
+                    class="flex items-center justify-between text-secondary font-label-md text-label-md tracking-widest"
+                  >
+                    <span>[■■■■■■■■□□]</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-secondary uppercase">[SLOT_04]</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">75%</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Git &amp; GitHub</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Version control standar: git branching, merge workflow, commit conventions, dan kolaborasi
+                    repositori.
+                  </p>
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-space-xs border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+                >
+                  <div
+                    class="flex items-center justify-between text-secondary font-label-md text-label-md tracking-widest"
+                  >
+                    <span>[■■■■■■■□□□]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between border-b-2 border-surface-container-high pb-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="text-primary font-headline-sm text-headline-sm">►</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">
+                  ARSIP PROJEK [PROJECTS.EXE]
+                </h2>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary uppercase">3 ARTIFACTS FOUND</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-xs">
+              <article
+                class="bg-surface-container flex flex-col border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+              >
+                <div
+                  class="bg-surface-container-highest px-space-sm py-1 border-b-2 border-surface-container-lowest flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-secondary uppercase">PROJECT_01.EXE</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">[RUNNING]</span>
+                </div>
+                <div class="p-space-md flex flex-col flex-grow justify-between gap-space-md">
+                  <div class="flex flex-col gap-space-sm">
+                    <div
+                      class="w-full h-36 bg-surface-container-lowest border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright relative overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        data-alt="A retro desktop software interface screenshot showing a pacman-like retro game in arcade style, dark charcoal background, UI with contrast color."
+                        src="./assets/image_f6dd05cd.jpg"
+                      />
+                      <div
+                        class="absolute top-1 left-1 bg-surface-container-lowest/90 px-1.5 py-0.5 border border-surface-variant font-label-sm text-label-sm text-secondary"
+                      >
+                        APP_ID: #GAME-01
+                      </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Independent Game Project</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                      Proyek game pribadi yang dibuat dengan game engine buatan sendiri dan banyak library open-source.
+                    </p>
+                    <div class="flex flex-wrap gap-1 pt-10">
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [C++]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [OPENGL]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-2 py-0.5 border border-surface-variant"
+                      >
+                        [GAME_ENGINE]
+                      </span>
+                    </div>
+                  </div>
+                 
+                </div>
+              </article>
+              <article
+                class="bg-surface-container flex flex-col border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+              >
+                <div
+                  class="bg-surface-container-highest px-space-sm py-1 border-b-2 border-surface-container-lowest flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-secondary uppercase">PROJECT_02.EXE</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">[STABLE]</span>
+                </div>
+                <div class="p-space-md flex flex-col flex-grow justify-between gap-space-md">
+                  <div class="flex flex-col gap-space-sm">
+                    <div
+                      class="w-full h-36 bg-surface-container-lowest border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright relative overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        data-alt="A vintage computer lab equipment inventory management screen mockup with list view, computer hardware status chips, classic grey buttons, and red warning indicators."
+                        src="./assets/image_76eaa895.jpg"
+                      />
+                      <div
+                        class="absolute top-1 left-1 bg-surface-container-lowest/90 px-1.5 py-0.5 border border-surface-variant font-label-sm text-label-sm text-secondary"
+                      >
+                        APP_ID: #GRPH-02
+                      </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Aplikasi Analisis Data</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                      Aplikasi analisis data kompleks dengan hasil perhitungan yang akurat dan fitur yang lengkap, dibuat dengan Matlab dan Pandas sebagai fondasi.
+                    </p>
+                    <div class="flex flex-wrap gap-1 pt-4">
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [PYTHON]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [MATLAB]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-2 py-0.5 border border-surface-variant"
+                      >
+                        [GRAPH]
+                      </span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </article>
+              <article
+                class="bg-surface-container flex flex-col border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+              >
+                <div
+                  class="bg-surface-container-highest px-space-sm py-1 border-b-2 border-surface-container-lowest flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-secondary uppercase">PROJECT_03.EXE</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">[ONLINE]</span>
+                </div>
+                <div class="p-space-md flex flex-col flex-grow justify-between gap-space-md">
+                  <div class="flex flex-col gap-space-sm">
+                    <div
+                      class="w-full h-36 bg-surface-container-lowest border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright relative overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        data-alt="Screenshot of an artisanal bakery landing page website in a retro desktop browser frame with warm amber pastry photos, simple product grid, and clear order buttons."
+                        src="./assets/image_61091036.jpg"
+                      />
+                      <div
+                        class="absolute top-1 left-1 bg-surface-container-lowest/90 px-1.5 py-0.5 border border-surface-variant font-label-sm text-label-sm text-secondary"
+                      >
+                        APP_ID: #DB-03
+                      </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Database Management App</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                      Aplikasi manajemen database yang ramah pengguna, memiliki fitur yang responsif dan performa yang unggul.
+                    </p>
+                    <div class="flex flex-wrap gap-1 pt-10">
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [PYTHON]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2 py-0.5 border border-surface-variant"
+                      >
+                        [MY_SQL]
+                      </span>
+                      <span
+                        class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-2 py-0.5 border border-surface-variant"
+                      >
+                        [DATABASE]
+                      </span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="max-w-3xl w-full mx-auto my-space-md">
+            <div
+              class="bg-surface-container border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black shadow-xl"
+            >
+              <div
+                class="bg-surface-container-highest px-space-md py-space-xs border-b-2 border-surface-container-lowest flex items-center justify-between"
+              >
+                <div class="flex items-center gap-space-xs">
+                  <span class="text-secondary font-label-md text-label-md">☎</span>
+                  <h2 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                    TERMINAL KONTAK [CONTACT.INI]
+                  </h2>
+                </div>
+                <span
+                  class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 border border-surface-variant"
+                >
+                  PORT_80: OPEN
+                </span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-lg">
+                <div
+                  class="bg-surface-container-lowest p-space-md border-2 border-t-black border-l-black border-b-surface-bright border-r-surface-bright flex flex-col gap-space-xs text-center sm:text-left"
+                >
+                  <div class="font-label-sm text-label-sm text-on-surface-variant uppercase">MESSAGE_PROMPT:</div>
+                  <p class="font-body-md text-body-md text-on-surface">
+                    Tertarik merekrut siswa magang atau desktop app developer? Silakan hubungi saya melalui kanal resmi
+                    di bawah ini untuk jadwal wawancara kerja:
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <a
+                    class="p-space-sm bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex items-center justify-between group transition-none"
+                    href="mailto:danishandro28@gmail.com"
+                  >
+                    <div class="flex flex-col text-left overflow-hidden">
+                      <span
+                        class="font-label-sm text-label-sm text-secondary group-hover:text-on-primary-container uppercase"
+                      >
+                        EMAIL_DIRECT:
+                      </span>
+                      <span class="font-body-sm text-body-sm truncate">danishandro28@gmail.com</span>
+                    </div>
+                    <span class="font-label-md text-label-md shrink-0 ml-2">►</span>
+                  </a>
+                  <a
+                    class="p-space-sm bg-surface-container-low hover:bg-secondary hover:text-on-secondary-fixed text-on-surface border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex items-center justify-between group transition-none"
+                    href="https://wa.me/+6285781697957"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <div class="flex flex-col text-left overflow-hidden">
+                      <span
+                        class="font-label-sm text-label-sm text-secondary group-hover:text-on-secondary-fixed uppercase"
+                      >
+                        WHATSAPP_LINE:
+                      </span>
+                      <span class="font-body-sm text-body-sm truncate">+62 857-8169-7957</span>
+                    </div>
+                    <span class="font-label-md text-label-md shrink-0 ml-2">►</span>
+                  </a>
+                  <a
+                    class="p-space-sm bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex items-center justify-between group transition-none"
+                    href="https://github.com/D-BUG13"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <div class="flex flex-col text-left overflow-hidden">
+                      <span
+                        class="font-label-sm text-label-sm text-secondary group-hover:text-on-primary-container uppercase"
+                      >
+                        GIT_REPOSITORY:
+                      </span>
+                      <span class="font-body-sm text-body-sm truncate">github.com/D-BUG13</span>
+                    </div>
+                    <span class="font-label-md text-label-md shrink-0 ml-2">►</span>
+                  </a>
+                  <a
+                    class="p-space-sm bg-surface-container-low hover:bg-secondary hover:text-on-secondary-fixed text-on-surface border-2 border-t-surface-bright border-l-surface-bright border-b-black border-r-black flex items-center justify-between group transition-none"
+                    href="https://www.instagram.com/andro_d28/"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <div class="flex flex-col text-left overflow-hidden">
+                      <span
+                        class="font-label-sm text-label-sm text-secondary group-hover:text-on-secondary-fixed uppercase"
+                      >
+                        INSTAGRAM:
+                      </span>
+                      <span class="font-body-sm text-body-sm truncate">@andro_d28</span>
+                    </div>
+                    <span class="font-label-md text-label-md shrink-0 ml-2">►</span>
+                  </a>
+                </div>
+                <div class="flex items-center justify-center pt-space-xs">
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest text-center"
+                  >
+                    *** END OF DATASTREAM — REKRUTMEN DIBUKA UNTUK TAHUN AJARAN INI ***
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-high border-t-2 border-surface-container-lowest">
+      <div
+        class="max-w-[1280px] mx-auto px-margin py-space-sm flex flex-col md:flex-row items-center justify-between border-x-2 border-surface-bright bg-surface-container text-on-surface-variant gap-space-sm"
+      >
+        <div class="flex items-center gap-space-xs">
+          <span
+            class="px-space-xs py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm border border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+          >
+            SMKN 02 SURAKARTA
+          </span>
+          <span
+            class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm border border-t-surface-bright border-l-surface-bright border-b-black border-r-black"
+          >
+            HTML 4.01
+          </span>
+          <span
+            class="px-space-xs py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+          >
+            PORTFOLIO_V2.0
+          </span>
+        </div>
+        <div class="font-body-sm text-body-sm text-on-surface-variant text-center">
+          <span class="text-secondary">[!]</span>
+          Best viewed in 1024x768 resolution • Tested on Netscape &amp; IE6 • © 2026 ANDR_DEV
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <span
+            class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-lowest text-on-surface border border-t-black border-l-black border-b-surface-bright border-r-surface-bright"
+          >
+            HITS: 001337
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
